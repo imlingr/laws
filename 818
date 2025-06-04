@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<title>網路法律小達人測驗</title>
+<style>
+  body { font-family: 微軟正黑體, Arial, sans-serif; background:#f0f8ff; margin:0; padding:20px; }
+  .container { max-width: 900px; margin: auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+  h2 { text-align:center; color:#333; }
+  .info { margin-bottom:20px; }
+  .info input { margin-right:10px; padding:5px; width:100px; }
+  .questions { margin-top:20px; }
+  .question { margin-bottom:15px; padding:10px; border-left:4px solid #2196F3; background:#fafafa; border-radius:4px; }
+  .question p { margin:0 0 8px; font-weight:bold; }
+  .options label { display:block; margin:4px 0; }
+  #submitBtn { display:block; width:150px; margin:20px auto; padding:10px; background:#4CAF50; color:#fff; border:none; border-radius:4px; cursor:pointer; font-size:16px; }
+  #result { display:none; margin-top:20px; padding:15px; background:#e0f7fa; border-radius:8px; }
+  #result h3 { margin-top:0; }
+</style>
+</head>
+<body>
+<div class="container">
+<h2>網路法律小達人測驗</h2>
+
+<div class="info">
+  <label>班級：<input type="text" id="class" placeholder="例：三甲"></label>
+  <label>座號：<input type="text" id="seat" placeholder="例：12"></label>
+  <label>姓名：<input type="text" id="name" placeholder="例：張三"></label>
+</div>
+
+<div class="questions">
+<!-- 1-10題：觸法情境 -->
+<div class="question">
+<p>1. 在IG公開同學醜照並標註「全校最醜」可能觸犯什麼罪？</p>
+<div class="options">
+<label><input type="radio" name="q1" value="A"> 妨害電腦使用罪</label>
+<label><input type="radio" name="q1" value="B"> 公然侮辱罪</label>
+<label><input type="radio" name="q1" value="C"> 竊盜罪</label>
+</div>
+</div>
+
+<div class="question">
+<p>2. 在LINE群組持續排擠同學，是否會觸法？</p>
+<div class="options">
+<label><input type="radio" name="q2" value="A"> 不會，單純移除不算犯法</label>
+<label><input type="radio" name="q2" value="B"> 可能會，若伴隨侮辱或威脅</label>
+<label><input type="radio" name="q2" value="C"> 一定觸法</label>
+</div>
+</div>
+
+<div class="question">
+<p>3. 發送不實謠言散布於網路，可能觸犯哪個罪？</p>
+<div class="options">
+<label><input type="radio" name="q3" value="A"> 妨害名譽罪</label>
+<label><input type="radio" name="q3" value="B"> 侵占罪</label>
+<label><input type="radio" name="q3" value="C"> 竊盜罪</label>
+</div>
+</div>
+
+<div class="question">
+<p>4. 未經同意公開他人私密照片，可能違反哪條法律？</p>
+<div class="options">
+<label><input type="radio" name="q4" value="A"> 著作權法</label>
+<label><input type="radio" name="q4" value="B"> 兒少性剝削防制條例</label>
+<label><input type="radio" name="q4" value="C"> 民法</label>
+</div>
+</div>
+
+<div class="question">
+<p>5. 在網路上散布色情影片，可能觸犯哪個法律？</p>
+<div class="options">
+<label><input type="radio" name="q5" value="A"> 著作權法</label>
+<label><input type="radio" name="q5" value="B"> 兒少性剝削條例</label>
+<label><input type="radio" name="q5" value="C"> 交通法</label>
+</div>
+</div>
+
+<div class="question">
+<p>6. 青少年長時間沉迷網路，影響學業，這樣的行為是否觸法？</p>
+<div class="options">
+<label><input type="radio" name="q6" value="A"> 不觸法，但需注意健康</label>
+<label><input type="radio" name="q6" value="B"> 觸犯法律</label>
+<label><input type="radio" name="q6" value="C"> 只有在網路賭博才觸法</label>
+</div>
+</div>
+
+<div class="question">
+<p>7. 在網路上散布他人個人資料，可能違反哪個法？</p>
+<div class="options">
+<label><input type="radio" name="q7" value="A"> 個人資料保護法</label>
+<label><input type="radio" name="q7" value="B"> 著作權法</label>
+<label><input type="radio" name="q7" value="C"> 刑法</label>
+</div>
+</div>
+
+<div class="question">
+<p>8. 青少年在網路上散布不實謠言，造成他人名譽受損，可能觸犯？</p>
+<div class="options">
+<label><input type="radio" name="q8" value="A"> 妨害名譽罪</label>
+<label><input type="radio" name="q8" value="B"> 侵占罪</label>
+<label><input type="radio" name="q8" value="C"> 竊盜罪</label>
+</div>
+</div>
+
+<div class="question">
+<p>9. 發送恐嚇訊息威脅他人，可能觸犯哪條法律？</p>
+<div class="options">
+<label><input type="radio" name="q9" value="A"> 恐嚇罪</label>
+<label><input type="radio" name="q9" value="B"> 妨害秘密罪</label>
+<label><input type="radio" name="q9" value="C"> 侵占罪</label>
+</div>
+</div>
+
+<div class="question">
+<p>10. 在網路上散布未經同意的私密照，可能違反？</p>
+<div class="options">
+<label><input type="radio" name="q10" value="A"> 著作權法</label>
+<label><input type="radio" name="q10" value="B"> 兒少性剝削防制條例</label>
+<label><input type="radio" name="q10" value="C"> 民法</label>
+</div>
+</div>
+
+<!-- 11-20題：受害與應對 -->
+<div class="question">
+<p>11. 收到網路威脅散布私密照，第一步應該？</p>
+<div class="options">
+<label><input type="radio" name="q11" value="A"> 刪除對話</label>
+<label><input type="radio" name="q11" value="B"> 立即截圖存證</label>
+<label><input type="radio" name="q11" value="C"> 私下與對方談判</label>
+</div>
+</div>
+
+<div class="question">
+<p>12. 遇到網路霸凌，應該怎麼做？</p>
+<div class="options">
+<label><input type="radio" name="q12" value="A"> 忍耐不要回應</label>
+<label><input type="radio" name="q12" value="B"> 封鎖並檢舉</label>
+<label><input type="radio" name="q12" value="C"> 反擊對方</label>
+</div>
+</div>
+
+<div class="question">
+<p>13. 被散布私密照後，應該？</p>
+<div class="options">
+<label><input type="radio" name="q13" value="A"> 忍耐不要理會</label>
+<label><input type="radio" name="q13" value="B"> 立即向警方或平台申訴</label>
+<label><input type="radio" name="q13" value="C"> 自己刪除內容</label>
+</div>
+</div>
+
+<div class="question">
+<p>14. 遇到網路性剝削，應該？</p>
+<div class="options">
+<label><input type="radio" name="q14" value="A"> 立即截圖存證</label>
+<label><input type="radio" name="q14" value="B"> 立即告知家長或老師</label>
+<label><input type="radio" name="q14" value="C"> 兩者皆是</label>
+</div>
+</div>
+
+<div class="question">
+<p>15. 如果自己不小心傳了私密照，應該？</p>
+<div class="options">
+<label><input type="radio" name="q15" value="A"> 不用擔心，沒事</label>
+<label><input type="radio" name="q15" value="B"> 立即刪除並向信任大人求助</label>
+<label><input type="radio" name="q15" value="C"> 轉傳給朋友</label>
+</div>
+</div>
+
+<div class="question">
+<p>16. 遇到網路霸凌，應該向誰求助？</p>
+<div class="options">
+<label><input type="radio" name="q16" value="A"> 家長或老師</label>
+<label><input type="radio" name="q16" value="B"> 警察</label>
+<label><input type="radio" name="q16" value="C"> 朋友</label>
+</div>
+</div>
+
+<div class="question">
+<p>17. 遇到網路詐騙，應該？</p>
+<div class="options">
+<label><input type="radio" name="q17" value="A"> 不管，自己想辦法解決</label>
+<label><input type="radio" name="q17" value="B"> 立即向警方或銀行通報</label>
+<label><input type="radio" name="q17" value="C"> 轉帳給對方解決</label>
+</div>
+</div>
+
+<div class="question">
+<p>18. 遇到網路上的假訊息，應該？</p>
+<div class="options">
+<label><input type="radio" name="q18" value="A"> 轉發給朋友</label>
+<label><input type="radio" name="q18" value="B"> 核實來源再傳</label>
+<label><input type="radio" name="q18" value="C"> 忽略不用理會</label>
+</div>
+</div>
+
+<div class="question">
+<p>19. 發現自己被網路霸凌，應該？</p>
+<div class="options">
+<label><input type="radio" name="q19" value="A"> 立即截圖存證</label>
+<label><input type="radio" name="q19" value="B"> 向家長、老師求助</label>
+<label><input type="radio" name="q19" value="C"> 以上皆是</label>
+</div>
+</div>
+
+<div class="question">
+<p>20. 要預防網路受害，最重要的是？</p>
+<div class="options">
+<label><input type="radio" name="q20" value="A"> 不上網</label>
+<label><input type="radio" name="q20" value="B"> 保持良好隱私設定與警覺</label>
+<label><input type="radio" name="q20" value="C"> 不和陌生人交友</label>
+</div>
+</div>
+
+</div>
+
+<div style="text-align:center;">
+<button id="submitBtn" onclick="calculateScore()">提交測驗</button>
+</div>
+
+<div id="result">
+<h3>測驗結果</h3>
+<p>您的得分：<span id="score"></span> 分</p>
+<p id="feedback"></p>
+</div>
+
+<script>
+const answers = {
+  q1: 'B', q2: 'B', q3: 'A', q4: 'B', q5: 'B',
+  q6: 'A', q7: 'A', q8: 'A', q9: 'A', q10: 'B',
+  q11: 'B', q12: 'B', q13: 'B', q14: 'C', q15: 'B',
+  q16: 'A', q17: 'B', q18: 'B', q19: 'C', q20: 'B'
+};
+
+function calculateScore() {
+  let totalScore = 0;
+  for (let i=1; i<=20; i++) {
+    const q = 'q'+i;
+    const options = document.getElementsByName(q);
+    let selected = '';
+    for (const opt of options) {
+      if (opt.checked) { selected=opt.value; break; }
+    }
+    if (selected === answers[q]) {
+      totalScore += (i <=10) ? 5 : 5; // 每題5分
+    }
+  }
+  document.getElementById('score').textContent = totalScore;
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('feedback').textContent = getFeedback(totalScore);
+}
+
+function getFeedback(score) {
+  if (score >= 90) return '優秀！你已具備良好的網路法律知識。';
+  if (score >= 70) return '不錯，但仍有進步空間。建議多了解相關法律。';
+  return '需要加強喔！請多多學習網路法律知識。';
+}
+</script>
+</div>
+</body>
+</html>
